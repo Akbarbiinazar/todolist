@@ -1,38 +1,120 @@
-.App {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #151719;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.todo {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+}
+
+.todo__title {
+  color: #fff;
+  font-size: 38px;
   text-align: center;
+  line-height: 40px;
+  font-weight: 900;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo__add {
+  margin: 20px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  background-color: transparent;
+  outline: none;
+  height: 40px;
+  border-radius: 7px;
+  padding-left: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo__input {
+  width: 78%;
+}
+
+
+.btn {
+  background: #ED760E;
+  width: 20%;
+  height: 40px;
+  border-radius: 7px;
+  margin-left: 10px;
+  outline: none;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+.todo__search {
+  margin: 20px 0;
+}
+
+.todo__searching {
+  width: 100%;
+}
+
+.todo__total {
   display: flex;
   flex-direction: column;
+
+}
+
+.total__done,
+.total__undone {
+  background-color: #191e24;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  /* justify-content: center; */
   align-items: center;
+  border-radius: 5px;
+}
+
+.total__done {
+  margin-bottom: 5px;
+  max-width: 145px;
+}
+
+.total__undone {
+  max-width: 160px;
+}
+
+span {
+  background-color: #E84A29;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  max-width: 20px;
+  border-radius: 5px;
+  font-weight: 800;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 530px) {
+  .todo__add {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .todo__input {
+    width: 100%;
+  }
+
+  .btn {
+    margin-top: 10px;
   }
 }

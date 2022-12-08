@@ -1,0 +1,43 @@
+.todoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #191e24;
+    padding: 0 20px;
+    border-radius: 5px;
+    border-left: 4px solid #ED760E;
+    margin-bottom: 10px;
+}
+
+
+.todoStart {
+    display: flex;
+    align-items: center;
+}
+
+.todoStartChecked {
+    display: flex;
+    align-items: center;
+    text-decoration: line-through;
+    text-decoration-color: #fff;
+    filter: brightness(0.4);
+}
+
+.todoStart__title {
+    color: #fff;
+    margin-left: 5px;
+}
+
+.todoEnd {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+button {
+    font-size: 18px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: #808080;
+}
